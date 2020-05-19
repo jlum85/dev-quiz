@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <div className="container">
-        <div class="wrapper">
+        <div className="wrapper">
           <Header />
           <Switch>
             <Route path="/" exact component={QuizList}></Route>

@@ -36,3 +36,22 @@ export const data = [
       "Memorize the JavaScript array methods quickly, including weird corner cases; no more looking them up. Slice, filter, map, reduce, and the rest.",
   },
 ];
+
+export const questions = [
+  {
+    order: 1,
+    question: `     javascript
+        const arr = ['a', 'b', 'c']
+        arr['five'] = 5
+        arr.length
+        // 3 ;
+        `,
+    expected: true,
+  },
+  {
+    order: 2,
+    question: "/^.{5}$/.test('1234')",
+    expected: true,
+  },
+  { order: 3, question: "/^.{5}$/.test('1234')", expected: true },
+];

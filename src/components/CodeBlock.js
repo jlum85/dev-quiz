@@ -5,7 +5,6 @@ import { dark } from "react-syntax-highlighter/dist/esm/styles/prism";
 // import { coy } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 const CodeBlock = ({ language, codeString }) => {
-  console.log({ language, codeString });
   return (
     <div className="code">
       <SyntaxHighlighter language={language} style={dark}>
@@ -16,7 +15,7 @@ const CodeBlock = ({ language, codeString }) => {
 };
 
 CodeBlock.propTypes = {
-  value: PropTypes.string.isRequired,
+  codeString: PropTypes.string.isRequired,
   language: PropTypes.string,
 };
 
