@@ -31,3 +31,21 @@ footer {
   text-decoration: none;
   color: black;
 }
+
+.icon {
+  display: inline-block;
+  fill: #1dc177;
+  height: 1em;
+  position: relative;
+  top: 0.125em;
+  width: 1em;
+}
+
+.completed {
+  color: white;
+  border-color: #4547e0;
+  background-color: #4547e0;
+  padding: 15px;
+  width: 70px;
+  border-radius: 5px;
+}

@@ -25,6 +25,20 @@ const Quiz = () => {
       return (
         <div key={idx} className="question-item">
           <CodeBlock codeString={item.question} />
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+            className="icon"
+            role="img"
+            aria-label="Pass Icon"
+          >
+            <title>Pass Icon</title>
+            <g aria-hidden="true">
+              <path d="M8.75 17.882l-4.359-4.359a.75.75 0 0 1 1.06-1.06l4.006 4.005 9.005-9.006a.75.75 0 0 1 1.061 1.061l-9.359 9.359a1 1 0 0 1-1.414 0z"></path>
+            </g>
+          </svg>
         </div>
       );
     } else if (item.order === selected) {
@@ -44,7 +58,7 @@ const Quiz = () => {
         {title} {selected} / {questions.length}
       </h1>
       {elems}
-      {completed ? <h4>Terminé</h4> : <></>}
+      {completed ? <h4 className="completed">Terminé</h4> : <></>}
     </>
   );
 };
