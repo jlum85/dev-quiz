@@ -1,31 +1,19 @@
 import React from "react";
-// import ReactMarkdown from "react-markdown";
 import "./App.css";
-import CodeBlock from "./CodeBlock";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import QuizList from "./components/QuizList";
+
+// listQuiz
+// selectedQuiz
 
 function App() {
-  const codeString2 = `    // javascript
-    const arr = ['a', 'b', 'c']
-    arr['five'] = 5
-    arr.length
-    // 3 ;
-   `;
-
-  const codeString = "(num) => num + 1";
-  const reg = '/^.{5}$/.test("1234")';
-
   return (
-    <div className="App">
-      <div className="container">
-        {/* <header className="App-header"></header> */}
-        {/* <ReactMarkdown source={input} renderers={{ code: CodeBlock }} /> */}
-        <CodeBlock codeString={codeString} />
-        <br></br>
-        <CodeBlock codeString={codeString2} />
-
-        <br></br>
-        <CodeBlock codeString={reg} />
-      </div>
+    <div className="container">
+      <Header />
+      <QuizList />
+      <Footer />
     </div>
   );
 }
