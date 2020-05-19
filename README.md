@@ -1,5 +1,13 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+```bash
+npm install react-markdown
+npm install react-syntax-highlighter
+```
+
+tutorial from :
+https://medium.com/young-developer/react-markdown-code-and-syntax-highlighting-632d2f9b4ada
+
 ## Available Scripts
 
 In the project directory, you can run:

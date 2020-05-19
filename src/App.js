@@ -1,24 +1,31 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+// import ReactMarkdown from "react-markdown";
+import "./App.css";
+import CodeBlock from "./CodeBlock";
 
 function App() {
+  const codeString2 = `    // javascript
+    const arr = ['a', 'b', 'c']
+    arr['five'] = 5
+    arr.length
+    // 3 ;
+   `;
+
+  const codeString = "(num) => num + 1";
+  const reg = '/^.{5}$/.test("1234")';
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        {/* <header className="App-header"></header> */}
+        {/* <ReactMarkdown source={input} renderers={{ code: CodeBlock }} /> */}
+        <CodeBlock codeString={codeString} />
+        <br></br>
+        <CodeBlock codeString={codeString2} />
+
+        <br></br>
+        <CodeBlock codeString={reg} />
+      </div>
     </div>
   );
 }
