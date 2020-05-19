@@ -1,5 +1,8 @@
 import React from "react";
-import CodeBlock from "./components/CodeBlock";
+import { useParams } from "react-router-dom";
+
+import CodeBlock from "./CodeBlock";
+import { data } from "../data/sample";
 
 const codeString2 = `    // javascript
 const arr = ['a', 'b', 'c']
@@ -12,9 +15,15 @@ const codeString = "(num) => num + 1";
 const reg = '/^.{5}$/.test("1234")';
 
 const Quiz = () => {
+  let { id } = useParams();
+  const res = data.filter((item) => item.id === id);
+  console.log(res);
+
   return (
     <>
-      <h1>Quiz</h1>
+      <h1>
+        Quiz , id : {id} - {id}
+      </h1>
 
       <CodeBlock codeString={codeString} />
       <br></br>

@@ -7,3 +7,27 @@
   width: 50%;
   margin: 0 auto;
 }
+
+.headerBack {
+  cursor: pointer;
+}
+
+header {
+  border: solid;
+}
+
+footer {
+  border: solid;
+  height: 40px;
+}
+
+.wrapper {
+  /* height: 100vh;
+  margin-bottom: -40px; */
+  min-height: calc(100vh - 40px);
+}
+
+.quiz-list a {
+  text-decoration: none;
+  color: black;
+}

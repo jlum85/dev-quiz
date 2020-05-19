@@ -1,22 +1,24 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import { data } from "../data/sample";
 
 const QuizList = () => {
   const elems = data.map((item, index) => {
-    const { title, description } = item;
+    const { id, title, description } = item;
     return (
-      <div key={title} className="quiz-list">
-        <li>
+      <div key={id} className="quiz-list">
+        <Link to={`/quiz/${id}`}>
           <h3> {title} </h3>
           <p>{description}</p>
-        </li>
+        </Link>
       </div>
     );
   });
 
   return (
     <div>
-      <h1>QuizList</h1>
+      <h2>QuizList</h2>
       {elems}
     </div>
   );
